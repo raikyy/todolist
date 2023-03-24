@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    background-image: url(ocean.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul>li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.add-block {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
+    flex-basis: 450px;
+}
+/* Поле ввода */
+#taskInput {
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    flex: 1 1 450px;
+    background-color: rgb(112, 174, 232);
+
+}
+
+/* Плейсхолдер */
+#taskInput::placeholder {
+    color: rgb(6, 25, 52);
+}
+
+
+#addBtn {
+    font-size: 20px;
+    color: rgb(8, 57, 134);
+    background-color: rgb(112, 174, 232);
+    border: none;
+}
+
+#list {
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.514);
+    background-color: white;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 5px;
+    background-color: rgb(112, 174, 232);
+}
+
+.item__btns {
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.fa-trash-can {
+    color: rgb(5, 5, 79);
+}
+.fa-trash-can:hover {
+    box-shadow: 0 0 10px 2px rgb(108, 32, 24);
+    background-color: rgb(108, 32, 24, 0.6);
+}
+
+.fa-square-check {
+    margin-right: 15px;
+    color: rgb(69, 69, 235);
+}
+.fa-square-check:hover {
+    box-shadow: 0 0 10px 2px rgb(103, 206, 106);
+    background-color: rgb(103, 206, 106, 0.6);
+}
+
+/* Поведение элемента списка если добавлен класс .done */
+.item.done {
+    text-decoration: line-through;
+}
